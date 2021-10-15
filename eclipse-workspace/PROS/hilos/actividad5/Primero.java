@@ -6,7 +6,7 @@ class Primero extends Thread  {
 		for (int i=1; i<15; i++) {
 			System.out.println("Primero " + i);
 			try {
-				// Esperamos 100ms (0,2s) antes de sacar el siguiente
+				// Esperamos 100ms (0,1s) antes de sacar el siguiente
 				sleep(100);
 			} catch (InterruptedException e) {}
 		}
