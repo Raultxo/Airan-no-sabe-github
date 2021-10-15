@@ -1,4 +1,4 @@
-package hilo2;
+package actividad2;
 
 public class Actividad2 {
 	public static void main(String[] args) {
@@ -9,6 +9,7 @@ public class Actividad2 {
 			// Creamos un hilo y le ponemos un nombre
 			Hilo hilo = new Hilo();
 			hilo.setName("Hilo " + (i));
+			// Empezamos el hilo
 			hilo.start();
 		}	
 		System.out.println("Final Programa");

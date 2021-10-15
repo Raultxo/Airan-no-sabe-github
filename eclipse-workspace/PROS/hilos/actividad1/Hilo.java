@@ -1,4 +1,4 @@
-package hilo1;
+package actividad1;
 
 public class Hilo extends Thread {
 

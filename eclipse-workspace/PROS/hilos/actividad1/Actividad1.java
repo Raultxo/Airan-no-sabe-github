@@ -1,8 +1,7 @@
-package hilo1;
+package actividad1;
 
 public class Actividad1 {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		// Creamos los 2 hilos y les damos un nombre
 		Hilo hilo1 = new Hilo();	
 		hilo1.setName("Primero");
