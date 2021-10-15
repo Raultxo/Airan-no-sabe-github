@@ -1,0 +1,49 @@
+package ventanasGestion;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class DialogoParticipantes extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel contentPanel = new JPanel();
+
+
+	public DialogoParticipantes() {
+		
+		dibujar();
+		gestionarEventos();
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		this.setModal(true);
+	}
+
+	
+	private void dibujar() {
+		
+		setResizable(false);
+		setBounds(100, 100, 594, 169);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		
+		
+	}
+	
+	
+	private void gestionarEventos() {
+		
+		
+	}
+
+
+	
+
+}

@@ -1,0 +1,114 @@
+package ejercicio4;
+
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Font;
+import java.time.LocalTime;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class Ejercicio4 extends TimerTask {
+
+	
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ejercicio4 window = new Ejercicio4();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Ejercicio4() {
+		System.out.println("HOLA");
+		//dibujar();
+		eventos();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void dibujar() {
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 484, 438);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblSegundo2 = new JLabel("");
+		lblSegundo2.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblSegundo2.setBounds(394, 166, 54, 133);
+		frame.getContentPane().add(lblSegundo2);
+		
+		JLabel lblSegundo1 = new JLabel("");
+		lblSegundo1.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblSegundo1.setBounds(340, 166, 54, 133);
+		frame.getContentPane().add(lblSegundo1);
+		
+		JLabel lblDosPuntos2 = new JLabel(":");
+		lblDosPuntos2.setForeground(new Color(255, 69, 0));
+		lblDosPuntos2.setFont(new Font("Dialog", Font.BOLD, 60));
+		lblDosPuntos2.setBounds(304, 165, 24, 113);
+		frame.getContentPane().add(lblDosPuntos2);
+		
+		JLabel lblMinuto2 = new JLabel("");
+		lblMinuto2.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblMinuto2.setBounds(238, 166, 54, 133);
+		frame.getContentPane().add(lblMinuto2);
+		
+		JLabel lblMinuto1 = new JLabel("");
+		lblMinuto1.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblMinuto1.setBounds(184, 165, 54, 133);
+		frame.getContentPane().add(lblMinuto1);
+		
+		JLabel lblDosPuntos1 = new JLabel(":");
+		lblDosPuntos1.setFont(new Font("Dialog", Font.BOLD, 60));
+		lblDosPuntos1.setForeground(new Color(255, 69, 0));
+		lblDosPuntos1.setBounds(148, 165, 24, 113);
+		frame.getContentPane().add(lblDosPuntos1);
+		
+		JLabel lblhora2 = new JLabel("");
+		lblhora2.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblhora2.setBounds(87, 166, 54, 133);
+		frame.getContentPane().add(lblhora2);
+		
+		JLabel lblHora1 = new JLabel("");
+		lblHora1.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/ZERO.png")));
+		lblHora1.setBounds(35, 165, 54, 133);
+		frame.getContentPane().add(lblHora1);
+		
+		JLabel lblFondo = new JLabel("");
+		lblFondo.setBounds(0, 0, 478, 412);
+		lblFondo.setIcon(new ImageIcon(Ejercicio4.class.getResource("/ejercicio4/imagenes/fondoReloj.png")));
+		frame.getContentPane().add(lblFondo);
+	}
+
+	private void eventos() {
+		run();
+	}
+	
+	@Override
+	public void run() {
+		Timer timer = new Timer();
+		timer.schedule(new Ejercicio4(), 0, 1000);
+	}
+	
+	
+
+}

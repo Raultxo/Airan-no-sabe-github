@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/galleta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cookie"
+        android:adjustViewBounds="true"
+        android:onClick="clickGalleta">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANTIDAD DE GALLETAS: ">
+        </TextView>
+
+        <TextView
+            android:id="@+id/cantGalletas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GALLETAS POR CLICK: ">
+        </TextView>
+
+        <TextView
+            android:id="@+id/galletasClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cursores: ">
+
+        </TextView>
+        <TextView
+            android:id="@+id/cantCursores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abuelas: ">
+        </TextView>
+        <TextView
+            android:id="@+id/cantAbuelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0">
+
+        </TextView>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPRAR"
+        android:onClick="comprar">
+    </Button>
+</LinearLayout>

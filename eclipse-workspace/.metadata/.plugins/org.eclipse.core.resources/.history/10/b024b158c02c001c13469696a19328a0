@@ -1,0 +1,18 @@
+package hilo2;
+
+public class Actividad2 {
+	public static void main(String arg[]) {
+		// Guardamos en un int el numero que se pasa como argumento
+		int numHilos = Integer.parseInt(arg[0]);
+
+		for(int i = 0; i < numHilos; i++){
+			Hilo hilo = new Hilo();
+			hilo.setName("Hilo " + (i+1));
+			hilo.start();
+			for (int j = 1; j <= 20; j++) {
+				System.out.println(hilo.getName());
+			}	
+		}	
+		System.out.print("Final Programa\n");
+	}
+}

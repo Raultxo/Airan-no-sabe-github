@@ -1,0 +1,18 @@
+package hilo1;
+
+public class Hilo extends Thread {
+	public void run(){
+		imprimirPrimero();
+		imprimirSegundo();
+	}
+	
+	private void imprimirPrimero() {
+		for (int i=1;i<20;i++) 
+			System.out.println("Primero " + i);
+	}
+	
+	private void imprimirSegundo() {
+		for (int i=1;i<20;i++) 
+			System.out.println("Segundo " + i);
+	}
+}

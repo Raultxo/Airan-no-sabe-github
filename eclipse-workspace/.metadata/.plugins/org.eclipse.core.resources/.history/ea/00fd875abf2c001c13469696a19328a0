@@ -1,0 +1,24 @@
+package hilo2;
+
+public class Actividad2 {
+	public static void main(String arg[]) {
+		try{
+			final int N = Math.abs(Integer.parseInt(arg[0]));
+			
+			Hilo arrHilos[] = new Hilo[N];
+			for(int i = 0; i < arrHilos.length; i++){
+				arrHilos[i] = new Hilo();
+				arrHilos[i].start();
+				for (int j = 0; j < 20; j++)
+					System.out.println("Hilo " + (i+1));
+			}
+			
+
+		}
+		catch(NumberFormatException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.print("Final Programa\n");
+	}
+}

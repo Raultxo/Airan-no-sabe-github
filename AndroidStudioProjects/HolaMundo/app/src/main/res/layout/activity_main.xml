@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EJERCICIO 1-->
+<!--
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce PRIMER valor">
+    </TextView>
+    <EditText
+        android:id="@+id/valor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "Introduce SEGUNDO valor">
+    </TextView>
+    <EditText
+        android:id="@+id/valor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUMAR"
+        android:onClick="sumar">
+    </Button>
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "La suma es:">
+    </TextView>
+</LinearLayout>
+-->
+<!-- EJERCICIO 2-->
+<!--
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding = "10sp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce PRIMER valor">
+    </TextView>
+    <EditText
+        android:id="@+id/valor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+    </EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "Introduce SEGUNDO valor">
+    </TextView>
+    <EditText
+        android:id="@+id/valor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+    </EditText>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/botonSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="operacion"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:onClick="operacion"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonMulti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:onClick="operacion"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonEntre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:onClick="operacion"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "RESUTLADO: ">
+    </TextView>
+</LinearLayout>
+-->
+
+<!-- EJERCICIO 3 -->
+<!--
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding = "10sp">
+
+    <Button
+        android:id="@+id/botonRojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROJO"
+        android:onClick="cambiarColor"
+        android:layout_marginHorizontal="3sp">
+    </Button>
+    <Button
+        android:id="@+id/botonAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AZUL"
+        android:onClick="cambiarColor"
+        android:layout_marginHorizontal="3sp">
+    </Button>
+</LinearLayout>
+-->
+<!-- EJERCICIO 4 -->
+<!--
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding = "10sp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce un DNI: ">
+    </TextView>
+    <LinearLayout
+        android:id="@+id/layoutDNI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding = "10sp">
+
+        <EditText
+            android:id="@+id/numeroDNI"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:hint="Numero DNI"
+            android:inputType="number"></EditText>
+        <EditText
+            android:id="@+id/letraDNI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Letra"
+            android:layout_marginHorizontal="10sp">
+        </EditText>
+    </LinearLayout>
+    <Button
+        android:id="@+id/botonAzul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VALIDAR DNI"
+        android:onClick="validarDNI"
+        android:layout_marginHorizontal="3sp">
+    </Button>
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="">
+    </TextView>
+</LinearLayout>
+-->
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding = "10sp">
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding = "10sp">
+
+        <Button
+            android:id="@+id/botonYahoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YAHOO"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonBing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BING"
+            android:onClick="cambiarImagen"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOOGLE"
+            android:onClick="onClick"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_yahoo">
+    </ImageView>
+</LinearLayout>

@@ -1,0 +1,192 @@
+package ventanasGestion;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import consultas.ConsultasDeportistas;
+import consultas.ConsultasEquipos;
+
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JComboBox;
+import javax.swing.JSpinner;
+
+public class DialogoParticipaciones extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel panelPrincipal = new JPanel();
+	private JLabel lblTitulo;
+	private JButton okButton, cancelButton;
+	private ConsultasDeportistas cDeportistas;
+	private ConsultasEquipos cEquipos;
+	private JList listaDeportistas;
+	private JScrollPane scrollDeportistas;
+	private JList listaEquipos;
+	private JScrollPane scrollEquipos;
+	private JPanel panel;
+	private JComboBox comboBox;
+	private JLabel lblMedalla;
+	private JLabel lblEdad;
+	private JSpinner spinner;
+
+	public DialogoParticipaciones() {
+		
+		cDeportistas = new ConsultasDeportistas();
+		cEquipos = new ConsultasEquipos();
+		
+		dibujar();
+		gestionarEventos();	
+	}
+	
+	private void dibujar() {
+		
+		setResizable(false);
+		setBounds(100, 100, 688, 300);
+		getContentPane().setLayout(new BorderLayout());
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(panelPrincipal, BorderLayout.CENTER);
+		GridBagLayout gbl_panelPrincipal = new GridBagLayout();
+		gbl_panelPrincipal.columnWidths = new int[]{188, 0, 0, 0};
+		gbl_panelPrincipal.rowHeights = new int[]{15, 0, 0, 0};
+		gbl_panelPrincipal.columnWeights = new double[]{0.0, 1.0, 1.0, Double.MIN_VALUE};
+		gbl_panelPrincipal.rowWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
+		panelPrincipal.setLayout(gbl_panelPrincipal);
+		
+		lblTitulo = new JLabel();
+		lblTitulo.setText("EDITAR PARTICIPANTES");
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		GridBagConstraints gbc_lblTitulo = new GridBagConstraints();
+		gbc_lblTitulo.gridwidth = 3;
+		gbc_lblTitulo.insets = new Insets(0, 0, 5, 0);
+		gbc_lblTitulo.anchor = GridBagConstraints.NORTH;
+		gbc_lblTitulo.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblTitulo.gridx = 0;
+		gbc_lblTitulo.gridy = 0;
+		panelPrincipal.add(lblTitulo, gbc_lblTitulo);
+		
+		scrollDeportistas = new JScrollPane();
+		GridBagConstraints gbc_scrollDeportistas = new GridBagConstraints();
+		gbc_scrollDeportistas.insets = new Insets(0, 0, 5, 5);
+		gbc_scrollDeportistas.fill = GridBagConstraints.BOTH;
+		gbc_scrollDeportistas.gridx = 0;
+		gbc_scrollDeportistas.gridy = 1;
+		panelPrincipal.add(scrollDeportistas, gbc_scrollDeportistas);
+		
+		listaDeportistas = new JList();
+		scrollDeportistas.setViewportView(listaDeportistas);
+		
+		scrollEquipos = new JScrollPane();
+		GridBagConstraints gbc_scrollEquipos = new GridBagConstraints();
+		gbc_scrollEquipos.insets = new Insets(0, 0, 5, 5);
+		gbc_scrollEquipos.fill = GridBagConstraints.BOTH;
+		gbc_scrollEquipos.gridx = 1;
+		gbc_scrollEquipos.gridy = 1;
+		panelPrincipal.add(scrollEquipos, gbc_scrollEquipos);
+		
+		listaEquipos = new JList();
+		scrollEquipos.setViewportView(listaEquipos);
+		
+		panel = new JPanel();
+		GridBagConstraints gbc_panel = new GridBagConstraints();
+		gbc_panel.insets = new Insets(0, 0, 5, 0);
+		gbc_panel.fill = GridBagConstraints.BOTH;
+		gbc_panel.gridx = 2;
+		gbc_panel.gridy = 1;
+		panelPrincipal.add(panel, gbc_panel);
+		GridBagLayout gbl_panel = new GridBagLayout();
+		gbl_panel.columnWidths = new int[]{0, 0, 0};
+		gbl_panel.rowHeights = new int[]{0, 0, 0};
+		gbl_panel.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+		panel.setLayout(gbl_panel);
+		
+		lblMedalla = new JLabel("Medalla:");
+		GridBagConstraints gbc_lblMedalla = new GridBagConstraints();
+		gbc_lblMedalla.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMedalla.anchor = GridBagConstraints.EAST;
+		gbc_lblMedalla.gridx = 0;
+		gbc_lblMedalla.gridy = 0;
+		panel.add(lblMedalla, gbc_lblMedalla);
+		
+		comboBox = new JComboBox();
+		GridBagConstraints gbc_comboBox = new GridBagConstraints();
+		gbc_comboBox.insets = new Insets(0, 0, 5, 0);
+		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
+		gbc_comboBox.gridx = 1;
+		gbc_comboBox.gridy = 0;
+		panel.add(comboBox, gbc_comboBox);
+		
+		lblEdad = new JLabel("Edad:");
+		GridBagConstraints gbc_lblEdad = new GridBagConstraints();
+		gbc_lblEdad.anchor = GridBagConstraints.EAST;
+		gbc_lblEdad.insets = new Insets(0, 0, 0, 5);
+		gbc_lblEdad.gridx = 0;
+		gbc_lblEdad.gridy = 1;
+		panel.add(lblEdad, gbc_lblEdad);
+		
+		spinner = new JSpinner();
+		GridBagConstraints gbc_spinner = new GridBagConstraints();
+		gbc_spinner.fill = GridBagConstraints.HORIZONTAL;
+		gbc_spinner.gridx = 1;
+		gbc_spinner.gridy = 1;
+		panel.add(spinner, gbc_spinner);
+		
+		JPanel panelBotones = new JPanel();
+		panelBotones.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		getContentPane().add(panelBotones, BorderLayout.SOUTH);
+		
+		okButton = new JButton("OK");
+		okButton.setActionCommand("OK");
+		panelBotones.add(okButton);
+		getRootPane().setDefaultButton(okButton);
+	
+	
+		cancelButton = new JButton("Cancel");
+		cancelButton.setActionCommand("Cancel");
+		panelBotones.add(cancelButton);
+		
+		this.setModal(true);
+	}
+	
+	private void gestionarEventos() {
+		this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				cerrarVentana();
+			}
+		});
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				cerrarVentana();
+			}
+		});
+		cancelButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				cerrarVentana();
+			}
+		});
+	}
+	
+	private void cerrarVentana() {
+		cDeportistas.cerrarConexion();
+		cEquipos.cerrarConexion();
+		setVisible(false);
+	}
+
+
+	
+
+}

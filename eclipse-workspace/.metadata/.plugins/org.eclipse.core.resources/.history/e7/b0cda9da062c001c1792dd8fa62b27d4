@@ -1,0 +1,99 @@
+package ventanasGestion;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+public class DialogoParticipaciones extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel panelPrincipal_1 = new JPanel();
+	private JLabel lblTitulo;
+	private JButton okButton, cancelButton;
+
+	public DialogoParticipaciones() {
+		
+		dibujar();
+		gestionarEventos();
+			
+	}
+	
+	private void dibujar() {
+		
+		setResizable(false);
+		setBounds(100, 100, 594, 300);
+		getContentPane().setLayout(new BorderLayout());
+		panelPrincipal_1.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(panelPrincipal_1, BorderLayout.CENTER);
+		GridBagLayout gbl_panelPrincipal_1 = new GridBagLayout();
+		gbl_panelPrincipal_1.columnWidths = new int[]{271, 0, 0};
+		gbl_panelPrincipal_1.rowHeights = new int[]{15, 0};
+		gbl_panelPrincipal_1.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
+		gbl_panelPrincipal_1.rowWeights = new double[]{0.0, Double.MIN_VALUE};
+		panelPrincipal_1.setLayout(gbl_panelPrincipal_1);
+		
+		lblTitulo = new JLabel();
+		lblTitulo.setText("EDITAR PARTICIPANTES");
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		GridBagConstraints gbc_lblTitulo = new GridBagConstraints();
+		gbc_lblTitulo.gridwidth = 2;
+		gbc_lblTitulo.insets = new Insets(0, 0, 0, 5);
+		gbc_lblTitulo.anchor = GridBagConstraints.NORTH;
+		gbc_lblTitulo.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblTitulo.gridx = 0;
+		gbc_lblTitulo.gridy = 0;
+		panelPrincipal_1.add(lblTitulo, gbc_lblTitulo);
+		
+		JPanel panelBotones = new JPanel();
+		panelBotones.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		getContentPane().add(panelBotones, BorderLayout.SOUTH);
+		
+		okButton = new JButton("OK");
+		okButton.setActionCommand("OK");
+		panelBotones.add(okButton);
+		getRootPane().setDefaultButton(okButton);
+	
+	
+		cancelButton = new JButton("Cancel");
+		cancelButton.setActionCommand("Cancel");
+		panelBotones.add(cancelButton);
+		
+		this.setModal(true);
+	}
+	
+	
+	private void gestionarEventos() {
+		this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				
+			}
+		});
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setVisible(false);
+			}
+		});
+		cancelButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setVisible(false);
+			}
+		});
+	}
+
+
+	
+
+}

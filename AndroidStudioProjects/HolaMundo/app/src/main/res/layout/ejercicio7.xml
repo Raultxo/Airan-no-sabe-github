@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding = "10sp"
+    >
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cámara 1"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/camara1"
+            android:minWidth="50sp"
+            android:minHeight="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camara_apagada"
+            android:background="@color/white"
+            android:onClick="camara"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luz 1"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/luz1"
+            android:minWidth="50sp"
+            android:minHeight="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/luz_apagada"
+            android:background="@color/white"
+            android:onClick="luz"
+            />
+
+        <ImageView
+            android:id="@+id/rgbRojo1"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz1"
+            android:src="@drawable/rojo"
+            />
+        <ImageView
+            android:id="@+id/rgbAzul1"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz1"
+            android:src="@drawable/azul" />
+        <ImageView
+            android:id="@+id/rgbVerde1"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz1"
+            android:src="@drawable/verde" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cámara 2"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/camara2"
+            android:minWidth="50sp"
+            android:minHeight="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camara_apagada"
+            android:background="@color/white"
+            android:onClick="camara"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luz 2"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/luz2"
+            android:minWidth="50sp"
+            android:minHeight="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/luz_apagada"
+            android:background="@color/white"
+            android:onClick="luz"
+        />
+        <ImageView
+            android:id="@+id/rgbRojo2"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz2"
+            android:src="@drawable/rojo" />
+        <ImageView
+            android:id="@+id/rgbAzul2"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz2"
+            android:src="@drawable/azul" />
+        <ImageView
+            android:id="@+id/rgbVerde2"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:onClick="cambiarColorLuz2"
+            android:src="@drawable/verde" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Persianas">
+
+        </TextView>
+
+        <Switch
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minHeight="50sp"
+            android:rotation="270"
+            android:padding="20sp">
+        </Switch>
+    </TableRow>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperatura"
+            android:layout_gravity="center">
+        </TextView>
+        <Button
+            android:id="@+id/restarTemperatura"
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:text="-"
+            android:onClick="restar">
+
+        </Button>
+        <EditText
+            android:id="@+id/txtTemperatura"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minWidth="50sp"
+            android:inputType="number"
+            android:onClick="temperatura"
+            android:text="20"
+            android:textAlignment="center">
+        </EditText>
+        <Button
+            android:id="@+id/sumarTemperatura"
+            android:layout_height="wrap_content"
+            android:layout_width="50sp"
+            android:layout_marginHorizontal="10sp"
+            android:text="+"
+            android:onClick="sumar">
+
+        </Button>
+        <ImageView
+            android:id="@+id/color"
+            android:layout_height="50sp"
+            android:layout_width="50sp"
+            android:src="@drawable/naranja"
+            android:layout_marginHorizontal="10sp"
+            >
+        </ImageView>
+    </LinearLayout>
+</TableLayout>

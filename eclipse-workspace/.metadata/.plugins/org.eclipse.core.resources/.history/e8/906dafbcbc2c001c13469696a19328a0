@@ -1,0 +1,11 @@
+package hilo1;
+
+public class Actividad1 {
+	public static void main(String arg[]) {
+		Hilo p=new Hilo();
+		Segundo s=new Segundo();
+		p.start();
+		s.start();
+		System.out.print("Fin programa\n");
+	}
+}

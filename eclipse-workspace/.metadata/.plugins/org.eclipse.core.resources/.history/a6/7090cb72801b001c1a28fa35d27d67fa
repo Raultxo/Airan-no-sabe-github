@@ -1,0 +1,303 @@
+package ejercicio3;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.SpringLayout;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.FlowLayout;
+import javax.swing.BoxLayout;
+import javax.swing.Icon;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Ejercicio3 {
+
+	private boolean luces = true;
+	private JLabel lblCoche, lblNewLabel, lblNewLabel_2, lblNewLabel_3, lblNewLabel_4, lblNewLabel_5, lblNewLabel_6, lblNewLabel_7, lblNewLabel_8, label_1, luces_1;
+	private JButton btnNewButton, btnNewButton_1, btnNewButton_2;
+	private JFrame frame;
+	private final JPanel panel = new JPanel();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ejercicio3 window = new Ejercicio3();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Ejercicio3() {
+		dibujar();
+		eventos();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void dibujar() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 750, 537);
+		SpringLayout springLayout = new SpringLayout();
+		frame.getContentPane().setLayout(springLayout);
+		
+		JPanel colores = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, colores, -54, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, colores, 0, SpringLayout.SOUTH, frame.getContentPane());
+		colores.setBackground(Color.BLACK);
+		frame.getContentPane().add(colores);
+		colores.setLayout(new GridLayout(0, 8, 0, 0));
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorBlazingRed.jpg")));
+		colores.add(lblNewLabel);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorElectricBlue.jpg")));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorLapisluxuryBlue.jpg"))); 
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorMidnightBlack.jpg"))); 
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorMoonwalkGrey.jpg")));
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorPepperWhite.jpg")));
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_6);
+		
+		lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_7.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorThunderGray.jpg"))); 
+		colores.add(lblNewLabel_7);
+		
+		lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorVolcaninOrange.jpg"))); 
+		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
+		colores.add(lblNewLabel_8);
+		
+		JPanel norte = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, panel, 0, SpringLayout.SOUTH, norte);
+		springLayout.putConstraint(SpringLayout.NORTH, norte, 10, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, norte, 91, SpringLayout.NORTH, frame.getContentPane());
+		norte.setBackground(Color.BLACK);
+		frame.getContentPane().add(norte);
+		norte.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/cooperLogo.png")));
+		norte.add(lblNewLabel_10);
+		
+		JLabel lblNewLabel_11 = new JLabel(Messages.getString("Ejercicio3.19")); 
+		lblNewLabel_11.setForeground(Color.WHITE);
+		lblNewLabel_11.setHorizontalAlignment(SwingConstants.RIGHT);
+		norte.add(lblNewLabel_11);
+		
+		JLabel lblSeleccionar = new JLabel("");
+		springLayout.putConstraint(SpringLayout.SOUTH, panel, 0, SpringLayout.NORTH, lblSeleccionar);
+		springLayout.putConstraint(SpringLayout.WEST, lblSeleccionar, 67, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, lblSeleccionar, -64, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, lblSeleccionar, -57, SpringLayout.EAST, frame.getContentPane());
+		lblSeleccionar.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSeleccionar.setForeground(Color.WHITE);
+		frame.getContentPane().add(lblSeleccionar);
+		
+		JPanel oeste = new JPanel();
+		springLayout.putConstraint(SpringLayout.WEST, panel, 0, SpringLayout.EAST, oeste);
+		oeste.setBackground(Color.BLACK);
+		springLayout.putConstraint(SpringLayout.WEST, norte, 0, SpringLayout.EAST, oeste);
+		springLayout.putConstraint(SpringLayout.WEST, colores, 0, SpringLayout.EAST, oeste);
+		springLayout.putConstraint(SpringLayout.WEST, oeste, 0, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, oeste, 50, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, oeste, 0, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, oeste, 0, SpringLayout.NORTH, frame.getContentPane());
+		frame.getContentPane().add(oeste);
+		
+		JPanel este = new JPanel();
+		springLayout.putConstraint(SpringLayout.EAST, panel, 0, SpringLayout.WEST, este);
+		este.setBackground(Color.BLACK);
+		springLayout.putConstraint(SpringLayout.WEST, este, -50, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, norte, 0, SpringLayout.WEST, este);
+		springLayout.putConstraint(SpringLayout.EAST, colores, 0, SpringLayout.WEST, este);
+		springLayout.putConstraint(SpringLayout.EAST, este, 0, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, este, 0, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, este, 0, SpringLayout.SOUTH, colores);
+		frame.getContentPane().add(este);
+		este.setLayout(null);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBounds(-16, 170, 87, 172);
+		este.add(panel_4);
+		panel_4.setLayout(new GridLayout(3, 0, 0, 0));
+		
+		btnNewButton = new JButton("ES");
+		
+		btnNewButton.setBackground(Color.BLACK);
+		btnNewButton.setForeground(Color.WHITE);
+		panel_4.add(btnNewButton);
+		
+		btnNewButton_1 = new JButton("EN");
+		btnNewButton_1.setBackground(Color.BLACK);
+		btnNewButton_1.setForeground(Color.WHITE);
+		panel_4.add(btnNewButton_1);
+		
+		btnNewButton_2 = new JButton("EUS");
+		btnNewButton_2.setBackground(Color.BLACK);
+		btnNewButton_2.setForeground(Color.WHITE);
+		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD, 12));
+		panel_4.add(btnNewButton_2);
+		
+		JPanel coche = new JPanel();
+		coche.setBackground(Color.BLACK);
+		springLayout.putConstraint(SpringLayout.NORTH, coche, 0, SpringLayout.SOUTH, norte);
+		springLayout.putConstraint(SpringLayout.WEST, coche, 0, SpringLayout.EAST, oeste);
+		SpringLayout sl_oeste = new SpringLayout();
+		oeste.setLayout(sl_oeste);
+		
+		label_1 = new JLabel("");
+		
+		lblCoche = new JLabel("");
+		lblCoche.setBackground(Color.BLACK);
+		lblCoche.setOpaque(true);
+		lblCoche.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniBlazingRed.png"))); 
+		coche.add(lblCoche);
+		
+		sl_oeste.putConstraint(SpringLayout.NORTH, label_1, 135, SpringLayout.NORTH, oeste);
+		sl_oeste.putConstraint(SpringLayout.EAST, label_1, -10, SpringLayout.EAST, oeste);
+		label_1.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/lucesOn.png"))); 
+		oeste.add(label_1);
+		panel.setOpaque(false);
+		panel.setBackground(Color.BLACK);
+		frame.getContentPane().add(panel);
+		panel.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		luces_1 = new JLabel("");
+		luces_1.setHorizontalAlignment(SwingConstants.CENTER);
+		luces_1.setVisible(false);
+		luces_1.setBackground(Color.BLACK);
+		luces_1.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/autoLuz.png"))); 
+		panel.add(luces_1);
+		springLayout.putConstraint(SpringLayout.SOUTH, coche, 0, SpringLayout.NORTH, lblSeleccionar);
+		springLayout.putConstraint(SpringLayout.EAST, coche, 0, SpringLayout.WEST, este);
+		frame.getContentPane().add(coche);
+		coche.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		
+	}
+	
+	private void eventos() {
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		lblNewLabel.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniBlazingRed.png")));
+			}
+		});
+		
+		lblNewLabel_2.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniElectricBlue.png")));
+			}
+		});
+		
+		lblNewLabel_3.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniLapisluxuryBlue.png")));
+			}
+		});
+		
+		lblNewLabel_4.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniMidnightBlack.png")));
+			}
+		});
+		
+		lblNewLabel_5.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniMoonwalkGrey.png"))); 
+			}
+		});
+		
+		lblNewLabel_6.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniPepperWhite.png"))); //$NON-NLS-1$
+			}
+		});
+		
+		lblNewLabel_7.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniLapisluxuryBlue.png"))); //$NON-NLS-1$
+			}
+		});
+		
+		lblNewLabel_8.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				lblCoche.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniElectricBlue.png"))); //$NON-NLS-1$
+			}
+		});
+		
+		label_1.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				if(luces) {
+					label_1.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/lucesOff.png"))); //$NON-NLS-1$
+					luces_1.setVisible(true);
+					luces = false;
+				}
+				else {
+					label_1.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/lucesOn.png"))); //$NON-NLS-1$
+					luces_1.setVisible(false);
+					luces = true;
+				}
+			}
+		});
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+	}
+}

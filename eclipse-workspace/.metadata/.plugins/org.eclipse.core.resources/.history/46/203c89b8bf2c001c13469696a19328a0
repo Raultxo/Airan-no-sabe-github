@@ -1,0 +1,16 @@
+package hilo2;
+
+public class Actividad2 {
+	public static void main(String arg[]) {
+		int numHilos = Integer.parseInt(arg[0]);	
+		Hilo hilos[] = new Hilo[numHilos];
+		for(int i = 0; i < numHilos - 1; i++){
+			hilos[i] = new Hilo();
+			hilos[i].start();
+			for (int j = 1; j <= 20; j++) {
+				System.out.println("Hilo " + (i + 1));
+			}	
+		}	
+		System.out.print("Final Programa\n");
+	}
+}

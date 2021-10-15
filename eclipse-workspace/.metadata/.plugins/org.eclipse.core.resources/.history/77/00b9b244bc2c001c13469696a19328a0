@@ -1,0 +1,11 @@
+package hilos;
+
+public class Hilos1 {
+	public static void main(String arg[]) {
+		Primero p=new Primero();
+		Segundo s=new Segundo();
+		p.run();
+		s.start();
+		System.out.print("Fin programa\n");
+	}
+}

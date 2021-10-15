@@ -1,0 +1,8 @@
+package hilo2;
+
+public class Hilo extends Thread {
+
+	public void run() {
+		
+	}
+}

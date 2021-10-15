@@ -1,0 +1,20 @@
+1633345317817	Delete element
+1633345477183	Delete element
+1633419390188	Rename type 'consultasOlimpiadas'
+1633426325348	Rename field 'lbltITULO'
+1633427170668	Rename type 'AniadirOlimpiada'
+1633427744619	Rename method 'comprobarOlimpiada'
+1633427757574	Rename method 'eventos'
+1633427769970	Rename method 'eventos'
+1633511073359	Rename method 'listaOlimpiadas'
+1633512926276	Rename type 'GestionarEventos'
+1633512937001	Rename type 'GestionarOlimpiadas'
+1633599362430	Rename field 'co'
+1633599370029	Rename field 'ce'
+1633599457380	Rename field 'listaParticipantes'
+1633693198479	Move compilation unit
+1633693259220	Rename type 'AnaidirParticipantes'
+1633693291656	Rename type 'VentanaParticipantes'
+1633693294836	Move compilation unit
+1633694040239	Rename type 'DialogoParticipantes'
+1633694112717	Rename method 'gestionarEventosEventos'

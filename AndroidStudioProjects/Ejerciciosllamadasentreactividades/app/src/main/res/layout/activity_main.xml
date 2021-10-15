@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding = "10sp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/botonActividad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad 01"
+        android:onClick="actividad1"/>
+    <Button
+        android:id="@+id/botonActividad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad 02"
+        android:onClick="actividad2"/>
+    <Button
+        android:id="@+id/botonActividad3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad 03"
+        android:onClick="actividad3"/>
+    <Button
+        android:id="@+id/botonActividad4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividad 04"
+        android:onClick="actividad4"/>
+    <Button
+        android:id="@+id/botonSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:onClick="salir"/>
+
+
+</LinearLayout>

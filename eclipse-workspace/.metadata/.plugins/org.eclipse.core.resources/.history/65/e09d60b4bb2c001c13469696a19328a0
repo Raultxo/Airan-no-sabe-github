@@ -1,0 +1,13 @@
+package hilos;
+
+public class Hilos1 {
+	public static void main(String arg[]) throws InterruptedException {
+		Primero p=new Primero();
+		Segundo s=new Segundo();
+		p.start();
+		s.start();
+		p.wait();
+		s.wait();
+		System.out.print("Fin programa\n");
+	}
+}

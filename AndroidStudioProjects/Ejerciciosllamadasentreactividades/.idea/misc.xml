@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/actividad03_1.xml" value="0.16485507246376813" />
+        <entry key="app/src/main/res/layout/actividad04_1.xml" value="0.10055724417426545" />
+        <entry key="app/src/main/res/layout/actividad04_2.xml" value="0.16197916666666667" />
+        <entry key="app/src/main/res/layout/actividad_1_1.xml" value="0.20516304347826086" />
+        <entry key="app/src/main/res/layout/actividad_1_2.xml" value="0.16302083333333334" />
+        <entry key="app/src/main/res/layout/actividad_2.xml" value="0.16302083333333334" />
+        <entry key="app/src/main/res/layout/actividad_2_1.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/actividad_2_2.xml" value="0.14635416666666667" />
+        <entry key="app/src/main/res/layout/actividad_3.xml" value="0.16302083333333334" />
+        <entry key="app/src/main/res/layout/actividad_3_1.xml" value="0.16485507246376813" />
+        <entry key="app/src/main/res/layout/actividad_3_2.xml" value="0.19882246376811594" />
+        <entry key="app/src/main/res/layout/actividad_4.xml" value="0.16302083333333334" />
+        <entry key="app/src/main/res/layout/actividad_4_1.xml" value="0.16485507246376813" />
+        <entry key="app/src/main/res/layout/actividad_4_2.xml" value="0.16485507246376813" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20516304347826086" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

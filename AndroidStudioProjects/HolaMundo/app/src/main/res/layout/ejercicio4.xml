@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding = "10sp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce un DNI: ">
+    </TextView>
+    <LinearLayout
+        android:id="@+id/layoutDNI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding = "10sp">
+
+        <EditText
+            android:id="@+id/numeroDNI"
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:hint="Numero DNI"
+            android:inputType="number">
+        </EditText>
+        <EditText
+            android:id="@+id/letraDNI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Letra"
+            android:layout_marginHorizontal="10sp">
+        </EditText>
+    </LinearLayout>
+    <Button
+        android:id="@+id/botonAzul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VALIDAR DNI"
+        android:onClick="validarDNI"
+        android:layout_marginHorizontal="3sp">
+    </Button>
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="">
+    </TextView>
+</LinearLayout>

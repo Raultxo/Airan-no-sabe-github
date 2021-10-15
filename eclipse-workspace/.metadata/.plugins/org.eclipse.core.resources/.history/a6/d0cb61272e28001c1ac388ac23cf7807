@@ -1,0 +1,53 @@
+package ventanasGestion;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+public class DialogoParticipantes extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel contentPanel = new JPanel();
+	private JLabel lblTitulo;
+
+
+	public DialogoParticipantes() {
+		
+		dibujar();
+		gestionarEventos();
+		
+		
+		
+	}
+
+	
+	private void dibujar() {
+		
+		setResizable(false);
+		setBounds(100, 100, 594, 169);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		
+		lblTitulo = new JLabel();
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		contentPanel.add(lblTitulo, BorderLayout.NORTH);
+		
+		this.setModal(true);
+	}
+	
+	
+	private void gestionarEventos() {
+		
+		
+	}
+
+
+	
+
+}

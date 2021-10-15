@@ -1,0 +1,16 @@
+package hilo2;
+
+public class Actividad2 {
+	public static void main(String[] args) {
+		// Guardamos en un int el numero que se pasa como argumento
+		int numHilos = Integer.parseInt(args[0]);
+		// Bucle que crea n Hilos
+		for(int i = 1; i <= numHilos; i++){
+			// Creamos un hilo y le ponemos un nombre
+			Hilo hilo = new Hilo();
+			hilo.setName("Hilo " + (i));
+			hilo.start();
+		}	
+		System.out.print("Final Programa\n");
+	}
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANTIDAD DE GALLETAS: ">
+
+        </TextView>
+        <TextView
+            android:id="@+id/cantGalletas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GALLETAS POR CLICK: ">
+
+        </TextView>
+        <TextView
+            android:id="@+id/galletasClick2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio: 10 galletas">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio: 50 galletas">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/cursor"
+                android:adjustViewBounds="true"
+                android:maxWidth="200sp"
+                android:maxHeight="200sp"
+                android:onClick="aumentarCursores">
+            </ImageView>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/abuela"
+                android:adjustViewBounds="true"
+                android:maxWidth="200sp"
+                android:maxHeight="200sp"
+                android:onClick="aumentarAbuelas">
+            </ImageView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/cantCursores2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/cantAbuelas2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            </TextView>
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprar"
+        android:onClick="comprasHechas">
+    </Button>
+
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+package ejercicio3;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.SpringLayout;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
+import javax.swing.SwingConstants;
+
+public class Ejercicio3 {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ejercicio3 window = new Ejercicio3();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Ejercicio3() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.BLACK);
+		frame.setBounds(100, 100, 760, 537);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		SpringLayout springLayout = new SpringLayout();
+		frame.getContentPane().setLayout(springLayout);
+		
+		JPanel panel = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, panel, -54, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, panel, 67, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, panel, 0, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, panel, -57, SpringLayout.EAST, frame.getContentPane());
+		panel.setBackground(Color.BLACK);
+		frame.getContentPane().add(panel);
+		panel.setLayout(new GridLayout(0, 8, 0, 0));
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorBlazingRed.jpg")));
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorElectricBlue.jpg")));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorLapisluxuryBlue.jpg")));
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorMidnightBlack.jpg")));
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorMoonwalkGrey.jpg")));
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorPepperWhite.jpg")));
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_7.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorThunderGray.jpg")));
+		panel.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("");
+		lblNewLabel_8.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/colores/colorVolcaninOrange.jpg")));
+		lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(lblNewLabel_8);
+		
+		JPanel panel_1 = new JPanel();
+		springLayout.putConstraint(SpringLayout.NORTH, panel_1, 10, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, panel_1, 91, SpringLayout.NORTH, frame.getContentPane());
+		panel_1.setBackground(Color.BLACK);
+		springLayout.putConstraint(SpringLayout.WEST, panel_1, 67, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, panel_1, -57, SpringLayout.EAST, frame.getContentPane());
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblNewLabel_10 = new JLabel("");
+		lblNewLabel_10.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/cooperLogo.png")));
+		panel_1.add(lblNewLabel_10);
+		
+		JLabel lblNewLabel_11 = new JLabel("CONFIGURA TU MINI COOPER");
+		lblNewLabel_11.setForeground(Color.WHITE);
+		lblNewLabel_11.setHorizontalAlignment(SwingConstants.RIGHT);
+		panel_1.add(lblNewLabel_11);
+		
+		JLabel lblNewLabel_9 = new JLabel("Selecciona tu color favorito");
+		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_9, 67, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_9, -64, SpringLayout.SOUTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_9, -57, SpringLayout.EAST, frame.getContentPane());
+		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_9.setForeground(Color.WHITE);
+		frame.getContentPane().add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_1, 6, SpringLayout.SOUTH, panel_1);
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_1, -6, SpringLayout.NORTH, lblNewLabel_9);
+		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_1, -57, SpringLayout.EAST, frame.getContentPane());
+		lblNewLabel_1.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/coches/miniBlazingRed.png")));
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_12 = new JLabel("");
+		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_1, 6, SpringLayout.EAST, lblNewLabel_12);
+		springLayout.putConstraint(SpringLayout.WEST, lblNewLabel_12, 31, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, lblNewLabel_12, -693, SpringLayout.EAST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel_12, 165, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, lblNewLabel_12, 194, SpringLayout.NORTH, frame.getContentPane());
+		lblNewLabel_12.setIcon(new ImageIcon(Ejercicio3.class.getResource("/ejercicio3/iconos/images/lucesOn.png")));
+		frame.getContentPane().add(lblNewLabel_12);
+	}
+}

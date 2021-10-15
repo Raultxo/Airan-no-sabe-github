@@ -1,0 +1,268 @@
+<?xml version="1.0" ?>
+<olimpiadas>
+   <olimpiada year="1896">
+      <juegos>1896 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Athina</ciduad>
+   </olimpiada>
+   <olimpiada year="1900">
+      <juegos>1900 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Paris</ciduad>
+   </olimpiada>
+   <olimpiada year="1904">
+      <juegos>1904 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>St. Louis</ciduad>
+   </olimpiada>
+   <olimpiada year="1906">
+      <juegos>1906 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Athina</ciduad>
+   </olimpiada>
+   <olimpiada year="1908">
+      <juegos>1908 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>London</ciduad>
+   </olimpiada>
+   <olimpiada year="1912">
+      <juegos>1912 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Stockholm</ciduad>
+   </olimpiada>
+   <olimpiada year="1920">
+      <juegos>1920 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Antwerpen</ciduad>
+   </olimpiada>
+   <olimpiada year="1924">
+      <juegos>1924 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Chamonix</ciduad>
+   </olimpiada>
+   <olimpiada year="1924">
+      <juegos>1924 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Paris</ciduad>
+   </olimpiada>
+   <olimpiada year="1928">
+      <juegos>1928 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Sankt Moritz</ciduad>
+   </olimpiada>
+   <olimpiada year="1928">
+      <juegos>1928 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Amsterdam</ciduad>
+   </olimpiada>
+   <olimpiada year="1932">
+      <juegos>1932 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Lake Placid</ciduad>
+   </olimpiada>
+   <olimpiada year="1932">
+      <juegos>1932 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Los Angeles</ciduad>
+   </olimpiada>
+   <olimpiada year="1936">
+      <juegos>1936 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Garmisch-Partenkirchen</ciduad>
+   </olimpiada>
+   <olimpiada year="1936">
+      <juegos>1936 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Berlin</ciduad>
+   </olimpiada>
+   <olimpiada year="1948">
+      <juegos>1948 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Sankt Moritz</ciduad>
+   </olimpiada>
+   <olimpiada year="1948">
+      <juegos>1948 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>London</ciduad>
+   </olimpiada>
+   <olimpiada year="1952">
+      <juegos>1952 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Oslo</ciduad>
+   </olimpiada>
+   <olimpiada year="1952">
+      <juegos>1952 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Helsinki</ciduad>
+   </olimpiada>
+   <olimpiada year="1956">
+      <juegos>1956 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Cortina d'Ampezzo</ciduad>
+   </olimpiada>
+   <olimpiada year="1956">
+      <juegos>1956 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Melbourne</ciduad>
+   </olimpiada>
+   <olimpiada year="1956">
+      <juegos>1956 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Stockholm</ciduad>
+   </olimpiada>
+   <olimpiada year="1960">
+      <juegos>1960 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Squaw Valley</ciduad>
+   </olimpiada>
+   <olimpiada year="1960">
+      <juegos>1960 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Roma</ciduad>
+   </olimpiada>
+   <olimpiada year="1964">
+      <juegos>1964 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Innsbruck</ciduad>
+   </olimpiada>
+   <olimpiada year="1964">
+      <juegos>1964 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Tokyo</ciduad>
+   </olimpiada>
+   <olimpiada year="1968">
+      <juegos>1968 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Grenoble</ciduad>
+   </olimpiada>
+   <olimpiada year="1968">
+      <juegos>1968 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Mexico City</ciduad>
+   </olimpiada>
+   <olimpiada year="1972">
+      <juegos>1972 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Sapporo</ciduad>
+   </olimpiada>
+   <olimpiada year="1972">
+      <juegos>1972 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Munich</ciduad>
+   </olimpiada>
+   <olimpiada year="1976">
+      <juegos>1976 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Innsbruck</ciduad>
+   </olimpiada>
+   <olimpiada year="1976">
+      <juegos>1976 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Montreal</ciduad>
+   </olimpiada>
+   <olimpiada year="1980">
+      <juegos>1980 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Lake Placid</ciduad>
+   </olimpiada>
+   <olimpiada year="1980">
+      <juegos>1980 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Moskva</ciduad>
+   </olimpiada>
+   <olimpiada year="1984">
+      <juegos>1984 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Sarajevo</ciduad>
+   </olimpiada>
+   <olimpiada year="1984">
+      <juegos>1984 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Los Angeles</ciduad>
+   </olimpiada>
+   <olimpiada year="1988">
+      <juegos>1988 winter</juegos>
+      <temporada>winter</temporada>
+      <ciduad>Calgary</ciduad>
+   </olimpiada>
+   <olimpiada year="1988">
+      <juegos>1988 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Calgary</ciduad>
+   </olimpiada>
+   <olimpiada year="1988">
+      <juegos>1988 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Seoul</ciduad>
+   </olimpiada>
+   <olimpiada year="1992">
+      <juegos>1992 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Albertville</ciduad>
+   </olimpiada>
+   <olimpiada year="1992">
+      <juegos>1992 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Barcelona</ciduad>
+   </olimpiada>
+   <olimpiada year="1994">
+      <juegos>1994 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Lillehammer</ciduad>
+   </olimpiada>
+   <olimpiada year="1996">
+      <juegos>1996 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Atlanta</ciduad>
+   </olimpiada>
+   <olimpiada year="1998">
+      <juegos>1998 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Nagano</ciduad>
+   </olimpiada>
+   <olimpiada year="2000">
+      <juegos>2000 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Sydney</ciduad>
+   </olimpiada>
+   <olimpiada year="2002">
+      <juegos>2002 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Salt Lake City</ciduad>
+   </olimpiada>
+   <olimpiada year="2004">
+      <juegos>2004 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Athina</ciduad>
+   </olimpiada>
+   <olimpiada year="2006">
+      <juegos>2006 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Torino</ciduad>
+   </olimpiada>
+   <olimpiada year="2008">
+      <juegos>2008 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Beijing</ciduad>
+   </olimpiada>
+   <olimpiada year="2010">
+      <juegos>2010 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Vancouver</ciduad>
+   </olimpiada>
+   <olimpiada year="2012">
+      <juegos>2012 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>London</ciduad>
+   </olimpiada>
+   <olimpiada year="2014">
+      <juegos>2014 Winter</juegos>
+      <temporada>Winter</temporada>
+      <ciduad>Sochi</ciduad>
+   </olimpiada>
+   <olimpiada year="2016">
+      <juegos>2016 Summer</juegos>
+      <temporada>Summer</temporada>
+      <ciduad>Rio de Janeiro</ciduad>
+   </olimpiada>
+</olimpiadas>

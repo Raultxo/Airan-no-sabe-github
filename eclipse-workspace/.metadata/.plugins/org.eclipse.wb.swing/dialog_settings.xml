@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.border.BorderDialog">
+		<item key="x" value="447"/>
+		<item key="y" value="123"/>
+		<item key="width" value="477"/>
+		<item key="height" value="506"/>
+	</section>
+	<section name="org.eclipse.wb.internal.core.utils.ui.dialogs.StringsDialog">
+		<item key="x" value="486"/>
+		<item key="y" value="224"/>
+		<item key="width" value="399"/>
+		<item key="height" value="304"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.models.combo.ComboBoxModelDialog">
+		<item key="x" value="443"/>
+		<item key="y" value="195"/>
+		<item key="width" value="486"/>
+		<item key="height" value="362"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.layout.gbl.ui.ColumnEditDialog">
+		<item key="x" value="516"/>
+		<item key="y" value="184"/>
+		<item key="width" value="339"/>
+		<item key="height" value="384"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.layout.gbl.ui.RowEditDialog">
+		<item key="x" value="516"/>
+		<item key="y" value="153"/>
+		<item key="width" value="339"/>
+		<item key="height" value="447"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.font.FontDialog">
+		<item key="x" value="432"/>
+		<item key="y" value="131"/>
+		<item key="width" value="508"/>
+		<item key="height" value="490"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.ImagePropertyEditor$ImageDialog">
+		<item key="x" value="405"/>
+		<item key="y" value="98"/>
+		<item key="width" value="881"/>
+		<item key="height" value="556"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.icon.IconPropertyEditor$ImageDialog">
+		<item key="x" value="245"/>
+		<item key="y" value="88"/>
+		<item key="width" value="881"/>
+		<item key="height" value="577"/>
+	</section>
+	<section name="org.eclipse.wb.internal.swing.model.property.editor.models.spinner.SpinnerModelDialog">
+		<item key="x" value="423"/>
+		<item key="y" value="154"/>
+		<item key="width" value="525"/>
+		<item key="height" value="445"/>
+	</section>
+</section>

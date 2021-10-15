@@ -1,0 +1,7 @@
+package hilo3;
+
+public class Hilo extends Thread {
+	public void run() {
+		System.out.println("El nombre del hilo es " + getName() + " y tiene la prioridad " + getPriority());
+	}
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layoutPrincipal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding = "10sp">
+
+    <LinearLayout
+        android:id="@+id/layoutBotones"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding = "10sp">
+
+        <Button
+            android:id="@+id/botonYahoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YAHOO"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonBing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BING"
+            android:onClick="cambiarImagen"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+        <Button
+            android:id="@+id/botonGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOOGLE"
+            android:onClick="onClick"
+            android:layout_marginHorizontal="3sp">
+        </Button>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_yahoo">
+    </ImageView>
+</LinearLayout>
