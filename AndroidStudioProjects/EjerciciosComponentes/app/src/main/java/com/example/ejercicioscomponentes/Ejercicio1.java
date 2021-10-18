@@ -36,11 +36,15 @@ public class Ejercicio1 extends AppCompatActivity {
     }
 
     private void cargarDatos() {
-        paises = new Pais[5];
-        paises[0] = new Pais("Francia", 5000000, "Torre Eiffel");
-        paises[1] = new Pais("España", 2000000, "Ayuso");
-        paises[2] = new Pais("Italia", 3000000, "Pizza");
-        paises[3] = new Pais("Andorra", 50000, "Impuestos");
-        paises[4] = new Pais("China", 300000000, "Comunismo");
+        paises = new Pais[] {
+        new Pais("Francia", 5000000, "Torre Eiffel"),
+        new Pais("España", 2000000, "Ayuso"),
+        new Pais("Italia", 3000000, "Pizza"),
+        new Pais("Andorra", 50000, "Impuestos"),
+        new Pais("China", 300000000, "Comunismo")};
+    }
+
+    public void volver(View v) {
+        finish();
     }
 }

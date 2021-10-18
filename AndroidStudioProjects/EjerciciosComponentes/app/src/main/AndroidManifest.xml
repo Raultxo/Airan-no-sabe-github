@@ -10,13 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EjerciciosComponentes">
         <activity
-            android:name=".Ejercicio1"
+            android:name=".Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ejercicio1"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Ejercicio2"
+            android:exported="true">
+
         </activity>
     </application>
 
