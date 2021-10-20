@@ -49,13 +49,13 @@ public class Participacion {
 	@Override
 	public String toString() {
 		String str = deportista.getNombre() + " del equipo: " + equipo.getNombre() + ", a la edad de: " + edad;
-		if(medalla.equals("Oro")) {
+		if(medalla.equals("Gold")) {
 			str += ", medalla: Oro";
 		}
-		if(medalla.equals("Plata")) {
+		if(medalla.equals("Silver")) {
 			str += ", medalla: Plata";
 		}
-		if(medalla.equals("Bronce")) {
+		if(medalla.equals("Bronze")) {
 			str += ", medalla: Bronce";
 		}
 		if(medalla.equals("Sin medalla")) {

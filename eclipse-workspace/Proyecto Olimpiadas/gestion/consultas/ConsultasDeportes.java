@@ -42,7 +42,7 @@ private Conexion cn;
 		
 		PreparedStatement ps;
 		try {
-			ps = cn.getConexion().prepareStatement("select * from Deporte");
+			ps = cn.getConexion().prepareStatement("select * from Deporte order by nombre");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Deporte deporte = new Deporte(rs.getInt(1), rs.getString(2));

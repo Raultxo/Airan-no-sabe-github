@@ -45,7 +45,14 @@ public class Deportista {
 	
 	@Override
 	public String toString() {
-		return nombre + ", sexo: " + sexo + ", peso: " + peso + "kg, altura: " + altura + "cm";
+		String str = nombre + ", sexo: " + sexo;
+		if(peso > 0) {
+			str += ", peso: " + peso + "kg";
+		}
+		if(altura > 0) {
+			str += ", altura: " + altura + "cm";
+		}
+		return str;
 	}
 	@Override
 	public int hashCode() {

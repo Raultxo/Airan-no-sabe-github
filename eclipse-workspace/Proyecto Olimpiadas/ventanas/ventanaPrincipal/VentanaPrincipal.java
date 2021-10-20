@@ -26,6 +26,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -39,6 +41,7 @@ import java.awt.GridLayout;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -54,6 +57,9 @@ public class VentanaPrincipal extends JFrame {
 	private JList<Evento> listaEventos;
 	private JList<Participacion> listaParticipaciones;
 	private JMenuItem mntmIdiomaEsp, mntmIdiomaIng, mntmIdiomaEus;
+	private JTextField txtBuscarEvento;
+	private JPanel panelBuscar;
+	private JLabel lblImgbuscar;
 	
 	public VentanaPrincipal() {
 		
@@ -91,10 +97,10 @@ public class VentanaPrincipal extends JFrame {
 		JPanel panel = new JPanel();
 		panelPrincipal.add(panel, BorderLayout.CENTER);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{440, 294, 0, 0};
-		gbl_panel.rowHeights = new int[]{0, 0, 126, 0, 0};
+		gbl_panel.columnWidths = new int[]{549, 294, 0, 0};
+		gbl_panel.rowHeights = new int[]{0, 0, 0, 126, 0, 0};
 		gbl_panel.columnWeights = new double[]{1.0, 1.0, 1.0, Double.MIN_VALUE};
-		gbl_panel.rowWeights = new double[]{0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
 		JLabel lblOlimpiada = new JLabel("Olimpiada:");
@@ -150,12 +156,42 @@ public class VentanaPrincipal extends JFrame {
 		gbc_lblListaDeParticipantes.gridy = 1;
 		panel.add(lblListaDeParticipantes, gbc_lblListaDeParticipantes);
 		
+		panelBuscar = new JPanel();
+		GridBagConstraints gbc_panelBuscar = new GridBagConstraints();
+		gbc_panelBuscar.fill = GridBagConstraints.BOTH;
+		gbc_panelBuscar.insets = new Insets(0, 0, 5, 5);
+		gbc_panelBuscar.gridx = 0;
+		gbc_panelBuscar.gridy = 2;
+		panel.add(panelBuscar, gbc_panelBuscar);
+		GridBagLayout gbl_panelBuscar = new GridBagLayout();
+		gbl_panelBuscar.columnWidths = new int[]{40, 0, 0};
+		gbl_panelBuscar.rowHeights = new int[]{0, 0};
+		gbl_panelBuscar.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
+		gbl_panelBuscar.rowWeights = new double[]{0.0, Double.MIN_VALUE};
+		panelBuscar.setLayout(gbl_panelBuscar);
+		
+		lblImgbuscar = new JLabel("");
+		lblImgbuscar.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/imagenes/search.png")));
+		GridBagConstraints gbc_lblImgbuscar = new GridBagConstraints();
+		gbc_lblImgbuscar.insets = new Insets(0, 0, 0, 5);
+		gbc_lblImgbuscar.gridx = 0;
+		gbc_lblImgbuscar.gridy = 0;
+		panelBuscar.add(lblImgbuscar, gbc_lblImgbuscar);
+		
+		txtBuscarEvento = new JTextField();
+		GridBagConstraints gbc_txtBuscarEvento = new GridBagConstraints();
+		gbc_txtBuscarEvento.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtBuscarEvento.gridx = 1;
+		gbc_txtBuscarEvento.gridy = 0;
+		panelBuscar.add(txtBuscarEvento, gbc_txtBuscarEvento);
+		txtBuscarEvento.setColumns(10);
+		
 		JScrollPane scrollEventos = new JScrollPane();
 		GridBagConstraints gbc_scrollEventos = new GridBagConstraints();
 		gbc_scrollEventos.fill = GridBagConstraints.BOTH;
 		gbc_scrollEventos.insets = new Insets(0, 0, 5, 5);
 		gbc_scrollEventos.gridx = 0;
-		gbc_scrollEventos.gridy = 2;
+		gbc_scrollEventos.gridy = 3;
 		panel.add(scrollEventos, gbc_scrollEventos);
 		
 		listaEventos = new JList<Evento>();
@@ -167,7 +203,7 @@ public class VentanaPrincipal extends JFrame {
 		gbc_scrollParticipantes.gridwidth = 2;
 		gbc_scrollParticipantes.insets = new Insets(0, 0, 5, 0);
 		gbc_scrollParticipantes.gridx = 1;
-		gbc_scrollParticipantes.gridy = 2;
+		gbc_scrollParticipantes.gridy = 3;
 		panel.add(scrollParticipantes, gbc_scrollParticipantes);
 		
 		listaParticipaciones = new JList<Participacion>();
@@ -177,7 +213,7 @@ public class VentanaPrincipal extends JFrame {
 		GridBagConstraints gbc_panelBotonesEventos = new GridBagConstraints();
 		gbc_panelBotonesEventos.insets = new Insets(0, 0, 0, 5);
 		gbc_panelBotonesEventos.gridx = 0;
-		gbc_panelBotonesEventos.gridy = 3;
+		gbc_panelBotonesEventos.gridy = 4;
 		panel.add(panelBotonesEventos, gbc_panelBotonesEventos);
 		panelBotonesEventos.setLayout(new GridLayout(0, 3, 0, 0));
 		
@@ -196,9 +232,8 @@ public class VentanaPrincipal extends JFrame {
 		JPanel panelBotonesParticipaciones = new JPanel();
 		GridBagConstraints gbc_panelBotonesParticipaciones = new GridBagConstraints();
 		gbc_panelBotonesParticipaciones.gridwidth = 2;
-		gbc_panelBotonesParticipaciones.insets = new Insets(0, 0, 0, 5);
 		gbc_panelBotonesParticipaciones.gridx = 1;
-		gbc_panelBotonesParticipaciones.gridy = 3;
+		gbc_panelBotonesParticipaciones.gridy = 4;
 		panel.add(panelBotonesParticipaciones, gbc_panelBotonesParticipaciones);
 		panelBotonesParticipaciones.setLayout(new GridLayout(0, 3, 0, 0));
 		
@@ -269,10 +304,28 @@ public class VentanaPrincipal extends JFrame {
 				} 	
 			}
 		});
-		
 		comboOlimpiadas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				cargarEventos();
+			}
+		});
+		txtBuscarEvento.addKeyListener(new KeyAdapter() {
+			public void keyReleased(KeyEvent e) {
+				DefaultListModel<Evento> modelo = new DefaultListModel<Evento>();
+				modelo.addAll(cEvento.listaEventos((Olimpiada) comboOlimpiadas.getSelectedItem(), txtBuscarEvento.getText()));
+				listaEventos.setModel(modelo);
+				if(modelo.size() > 0) {
+					listaEventos.setSelectedIndex(0);
+					btnEditarEvento.setEnabled(true);
+					btnEliminarEvento.setEnabled(true);
+					btnAniadirParticipacion.setEnabled(true);
+				}
+				else {
+					btnEditarEvento.setEnabled(false);
+					btnEliminarEvento.setEnabled(false);
+					btnAniadirParticipacion.setEnabled(false);
+				}
+				cargarParticipaciones();	
 			}
 		});
 	}
@@ -353,25 +406,29 @@ public class VentanaPrincipal extends JFrame {
 			comboOlimpiadas.setSelectedIndex(0);
 			btnEditarOlimpiada.setEnabled(true);
 			btnEliminarOlimpiada.setEnabled(true);
+			btnAniadirEvento.setEnabled(true);
 		}
 		else {
 			btnEditarOlimpiada.setEnabled(false);
 			btnEliminarOlimpiada.setEnabled(false);
+			btnAniadirEvento.setEnabled(false);
 		}
 	}
 	
 	private void cargarEventos() {
 		DefaultListModel<Evento> modelo = new DefaultListModel<Evento>();
-		modelo.addAll(cEvento.listaEventos((Olimpiada) comboOlimpiadas.getSelectedItem()));
+		modelo.addAll(cEvento.listaEventos((Olimpiada) comboOlimpiadas.getSelectedItem(), ""));
 		listaEventos.setModel(modelo);
 		if(modelo.size() > 0) {
 			listaEventos.setSelectedIndex(0);
 			btnEditarEvento.setEnabled(true);
 			btnEliminarEvento.setEnabled(true);
+			btnAniadirParticipacion.setEnabled(true);
 		}
 		else {
 			btnEditarEvento.setEnabled(false);
 			btnEliminarEvento.setEnabled(false);
+			btnAniadirParticipacion.setEnabled(false);
 		}
 		
 		cargarParticipaciones();

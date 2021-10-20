@@ -35,12 +35,13 @@ public class ConsultasDeportistas {
 		return null;
 	}
 	
-	public ArrayList<Deportista> listaDeportistas() {
+	public ArrayList<Deportista> listaDeportistas(String nombre) {
 		ArrayList<Deportista> deportistas = new ArrayList<Deportista>();
 		
 		PreparedStatement ps;
 		try {
-			ps = cn.getConexion().prepareStatement("select * from Deportista");
+			ps = cn.getConexion().prepareStatement("select * from Deportista where nombre like ?");
+			ps.setString(1, "%" + nombre + "%");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Deportista depor = new Deportista(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5));

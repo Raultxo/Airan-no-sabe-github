@@ -31,11 +31,8 @@ public class DialogoOlimpiadas extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel panelPrincipal = new JPanel();
 	private JButton okButton, cancelButton;
-	private JLabel lblAnio;
-	private JTextField txtAnio;
-	private JLabel lblCiudad;
-	private JTextField txtCiudad;
-	private JLabel lblTitulo;
+	private JLabel lblTitulo, lblAnio, lblCiudad;
+	private JTextField txtAnio, txtCiudad;
 	private JRadioButton rdbtnSummer, rdbtnWinter;
 	private ButtonGroup bg;
 	private Olimpiada olimpiada;
@@ -202,8 +199,7 @@ public class DialogoOlimpiadas extends JDialog {
 						else {
 							cOlimpiadas.insertarOlimpiada(olimp);
 							cerrarVentana();
-						}
-						
+						}		
 					}
 				}
 				else {
@@ -239,7 +235,7 @@ public class DialogoOlimpiadas extends JDialog {
 		else {
 			try {
 				int anio = Integer.parseInt(txtAnio.getText());
-				if(anio < 1000 || anio > 9999) {
+				if(anio < 1896 || anio > 9999) {
 					JOptionPane.showMessageDialog(getContentPane(), "El año no es correcto");
 					return false;
 				}
@@ -247,10 +243,8 @@ public class DialogoOlimpiadas extends JDialog {
 				JOptionPane.showMessageDialog(getContentPane(), "El año no es numerico");
 				return false;
 			}
-		}
-		
+		}	
 		return true;
-		
 	}
 	
 	private void cerrarVentana() {

@@ -36,12 +36,13 @@ public class ConsultasEquipos {
 		return null;
 	}
 	
-	public ArrayList<Equipo> listaEquipos() {
+	public ArrayList<Equipo> listaEquipos(String nombre) {
 		ArrayList<Equipo> equipos = new ArrayList<Equipo>();
 		
 		PreparedStatement ps;
 		try {
-			ps = cn.getConexion().prepareStatement("select * from Equipo");
+			ps = cn.getConexion().prepareStatement("select * from Equipo where nombre like ?");
+			ps.setString(1, "%" + nombre + "%");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Equipo equipo = new Equipo(rs.getInt(1), rs.getString(2), rs.getString(3));

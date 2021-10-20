@@ -31,8 +31,7 @@ public class ConsultasOlimpiadas {
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			if(rs.next()) {
-				olimp = new Olimpiada(id, rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
-				
+				olimp = new Olimpiada(id, rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));	
 			}
 		} catch(SQLException e) {
 			return null;
@@ -46,7 +45,7 @@ public class ConsultasOlimpiadas {
 		
 		PreparedStatement ps;
 		try {
-			ps = cn.getConexion().prepareStatement("select * from Olimpiada");
+			ps = cn.getConexion().prepareStatement("select * from Olimpiada order by anio desc");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Olimpiada olimp = new Olimpiada(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
@@ -87,7 +86,6 @@ public class ConsultasOlimpiadas {
 		} catch(SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 	
 	public void editarOlimpiada(Olimpiada olimp) {
@@ -105,12 +103,10 @@ public class ConsultasOlimpiadas {
 		}
 	}
 	
-	public boolean borrarOlimpiada(Olimpiada olimp) {
-		
+	public boolean borrarOlimpiada(Olimpiada olimp) {		
 		if(consultasEventos.existeEventoConOlimpiada(olimp)) {
 			return false;
-		}
-		
+		}	
 		PreparedStatement ps;
 		try {
 			ps = cn.getConexion().prepareStatement("delete from Olimpiada where id_olimpiada = ?");

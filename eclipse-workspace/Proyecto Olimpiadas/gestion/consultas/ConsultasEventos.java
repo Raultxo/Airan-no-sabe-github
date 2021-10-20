@@ -26,13 +26,14 @@ public class ConsultasEventos {
 		this.cDeportes = new ConsultasDeportes();
 	}
 	
-	public ArrayList<Evento> listaEventos(Olimpiada olimp) {
+	public ArrayList<Evento> listaEventos(Olimpiada olimp, String nombre) {
 		ArrayList<Evento> eventos = new ArrayList<Evento>();
 		
 		PreparedStatement ps;
 		try {
-			ps = cn.getConexion().prepareStatement("select * from Evento where id_olimpiada = ?");
+			ps = cn.getConexion().prepareStatement("select * from Evento where id_olimpiada = ? and nombre like ?");
 			ps.setInt(1, olimp.getId());
+			ps.setString(2, "%" + nombre + "%");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Deporte deporte = cDeportes.getDeportePorId(rs.getInt(4));
