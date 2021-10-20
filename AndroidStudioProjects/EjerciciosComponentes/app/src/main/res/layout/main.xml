@@ -9,27 +9,23 @@
         android:layout_height="wrap_content"
         android:text="Selecciona el ejercicio:"
         android:textSize="25sp">
-
     </TextView>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ejercicio 1"
         android:onClick="ejercicio1">
-
     </Button>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ejercicio 2"
         android:onClick="ejercicio2">
-
     </Button>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ejercicio 3"
-        android:onClick="ejercico3">
-
+        android:onClick="ejercicio3">
     </Button>
 </LinearLayout>
